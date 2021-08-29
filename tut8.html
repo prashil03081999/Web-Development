@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>This is HTML forms tutorial</h2>
+    <form action="backend.php">
+        <div>
+            Name:<input type="text" name="myName">
+        </div>
+        <br>
+        <div>
+            Role :<input type="text" name="myRole">
+        </div>
+        <br>
+        <div>
+            Email : <input type="email" name="myEmail" >
+        </div>
+        <br>
+        <div>
+            date: <input type="date" name="myDate" >
+        </div> 
+        <br>
+        <div>
+            Age: <input type="number" name="myAge" >
+        </div>
+        <br>
+        <div>
+            Are u above 18?: <input type="checkbox" name="above18" >
+        </div>
+        <br>
+        <div>
+            Are u Single?: <input type="checkbox" name="above18" checked>
+        </div>
+        <br>
+        <div>
+            Gender: Male <input type="radio" name="mygender" >
+            Female <input type="radio" name="mygender" >
+            Female <input type="radio" name="mygender" >
+        </div>
+        <br>
+        <div>
+           <label for="car">Which Car?</label>
+           <select name="myCar" id="car">
+               <option value="indica">Indica</option>
+               <option value="swift">Swift</option>
+               <option value="nano" selected>Nano</option>
+           </select>
+        </div>
+        <br>
+        <div>
+            Any Suggestions: <br> <textarea name="myText" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+            Reset:<input type="Submit" value="Reset Now">
+        </div>
+        <br>
+        <div>
+            Submit:<input type="Submit" value="Submit Now">
+        </div>
+    </form>
+
+</body>
+</html>
