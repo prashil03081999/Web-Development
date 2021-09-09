@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        .box{
+            background-color: yellow;
+            color: red;
+            border: 2px solid rgb(7, 1, 1);
+            text-align: center;
+            font-size: 52px;
+            display: none;
+        }
+        @media(max-width:300px){
+            #box1{
+                display: block;
+                color: black;
+                background-color: rgb(247, 248, 192);
+            }
+        }
+        @media(min-width:300px)and (max-width:500px){
+            #box2{
+                display: block;
+                color: black;
+                background-color: aqua;
+            }
+        }
+        @media(min-width:500px)and (max-width:800px){
+            #box3{
+                display: block;
+                color: black;
+                background-color: rgb(228, 250, 199) ;
+            }
+        }
+        @media(min-width:800px)and (max-width:1000px){
+            #box4{
+                display: block;
+                color: black;
+                background-color: rgb(243, 196, 207);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">Iam a Phone</div>
+    <div class="box" id="box2">Iam a Tablet</div>
+    <div class="box" id="box3">Iam a Desktop</div>
+    <div class="box" id="box4">Iam a projector screen</div>  
+
+</body>
+</html>
