@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Before and After Pseudo Selectors</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            color: white;
+        }
+        /* these lines are key for the best website */
+        header ::before{
+            background: url("https://source.unsplash.com/user/erondu/1600x900") no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .navigation {
+            display: flex;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        li {
+            list-style: none;
+            padding: 34px 23px;
+        }
+
+        section {
+            margin: 3px 23px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section::after {
+            content: "This is content after the section";
+        }
+
+        /* section::before{
+            content: "This is content before the section";
+        } */
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item" id="item">Home</li>
+                <li class="item" id="item">About Us</li>
+                <li class="item" id="item">Contact</li>
+                <li class="item" id="item">Services</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h3>Welcome to Coding World</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam deserunt expedita molestiae similique
+            impedit distinctio ipsum atque minima modi quisquam suscipit vero mollitia ab quae commodi ea earum qui,
+            quaerat magni ad beatae? Ad.</p>
+    </section>
+    
+</body>
+
+</html>
