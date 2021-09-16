@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanning Multiple Rows and Columns in Grid</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat (5, 1fr );
+            /* grid-column-gap: 2rem;
+            grid-row-gap: 1rem; */
+            gap: 1rem;
+        }
+        .box{
+            background-color: rgb(235, 212, 181);
+            border: 2px solid black;
+            padding: 23px;
+        }
+        .box:first-child{
+            /* grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+            grid-column: 1 /span 3;
+            grid-row:  1 /span 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Iam Box-1</div>
+        <div class="box">Iam Box-2</div>
+        <div class="box">Iam Box-3</div>
+        <div class="box">Iam Box-4</div>
+        <div class="box">Iam Box-5</div>
+        <div class="box">Iam Box-6</div>
+        <div class="box">Iam Box-7</div>
+        <div class="box">Iam Box-8</div>
+        <div class="box">Iam Box-9</div>
+        <div class="box">Iam Box-10</div>
+        <div class="box">Iam Box-11</div>
+        <div class="box">Iam Box-12</div>
+        <div class="box">Iam Box-13</div>
+        <div class="box">Iam Box-14</div>
+        <div class="box">Iam Box-15</div>
+        <div class="box">Iam Box-16</div>
+        <div class="box">Iam Box-17</div>
+        <div class="box">Iam Box-18</div>
+        <div class="box">Iam Box-19</div>
+        <div class="box">Iam Box-20</div>
+    </div>
+</body>
+</html>
