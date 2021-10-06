@@ -1,40 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>#title</title>
+doctype html
+
+//- index.pug
+doctype html
+html
+  head
     style
+      include ../static/style.css
+  body
+    body
+    nav#navbar
+        ul
+            div#logo 
+                img(src="/static/dance logo2.png")
+                | PRDA
+            li #[a(href="/") Home]
+            li #[a(href="/") About]
+            li #[a(href="/") Services]
+            li #[a(href="/") Class Info]
+            li #[a(href="/") Contact Us]
 
-        include ../static/style.css
-</head>
-<body>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="container">
-            <h1>To Get the membership of Salon For Rs 1500/- for a Year.</h1>
-            <h1> Fill The Form Asap </h1>
-            <!-- <p>
-                |#{content}
-                | This is a plain html using pug  
-            </p> -->
+    section#introSection
+        div Welcome to My Online Dance Academy
+        div.small Eat Sleep Dance Repeat! 
 
-            <form action="/" method="post" id="contact">
-                <input type="text" name="name" id="name" placeholder="Enter your name">
-                <input type="text" name="age" id="age" placeholder="Enter your age">
-                <input type="text" name="gender" id="gender" placeholder="Enter your gender">
-                <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter your address"></textarea>
-                <textarea name="more" id="more" cols="30" rows="10" placeholder="More about you.."></textarea>
-                <button class="btn">Submit</button>
-            </form>
-        </div>
-       
-        
-</body>
-</html>
+    section#missionSection
+        h2 Our Mission
+        div.card
+          h4 Dance Teaching for beginners
+           div.card-box
+                div.card-img
+                    img(src="/static/beginer.jpg")
+                div.card-content
+                    p This is the best dance academy of the universe
+        div.card
+          h4 Dance Teaching for Mediocres
+           div.card-box
+                div.card-img
+                    img(src="/static/mediocre.jpg")
+                div.card-content
+                    p This is the best dance academy of the universe
+        div.card
+          h4 Dance Teaching for Experts
+           div.card-box
+                div.card-img
+                    img(src="/static/expert.jpg")
+                div.card-content
+                    p This is the best dance academy of the universe
+
+    section#sponsorsSection
+        h2 Our Sponsers
+        div
+        #sponsers 
+        img(src="/static/sponsor1.jpg",class="spImage")
+        img(src="/static/sponsor2.jpg",class="spImage")
+        img(src="/static/sponsor3.jpg",class="spImage")
+        img(src="/static/sponsor4.png",class="spImage")
+
+    footer#footer
+        | Copyright © 2021 PRDanceAcademy.com | All Rights Reserved
+
+    script
+      include ../static/index.js
