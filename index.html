@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is my home page</title>
-    <style>
-        li{
-            margin: 23px;
-            list-style: none;
-        }
-        ul{
-            display: flex;
-        }
-    </style>
-    
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+     
+     <style>
+         *{
+             margin: 0;
+             padding: 0;
+         }
+         #map{
+            width: 100vw;
+            height: 100vh;
+         }
+     </style>
+    <title>Pr corona Map</title>
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li class="item"> <a href='/'></a> Home</li>
-            <li class="item"><a href='/about'></a>About</li>
-            <li class="item"><a href='/contact'></a>Contact</li>
-            <li class="item"><a href='/services'></a>Services</li>
-        </ul>
-    </nav>
+    <div id='map'></div>
 </body>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoicHJhc2hpbHIiLCJhIjoiY2t1aHlhejdhMGhmZzJ2b3pyeTlvdjkzdiJ9.egc4jv2q0CFNXUjyYLmo9g';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v10',//streets-v11dark-v10
+    zoom: 1,
+    center:[0,20]
+});
+</script>
+
+<script src="index.js"></script>
+
 </html>
