@@ -1,40 +1,29 @@
-function updateMap() {
-    fetch("/data.json")
-        .then(Response => Response.json())
-        .then(rsp => { 
-            // console.log(rsp.data)
-            rsp.data.forEach(element => {
-                latitude = element.latitude
-                longitude = element.longitude
+
+// getting-started.js
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/prkart', {useNewUrlParser: true,
+useUnifiedTopology:true});
+
+var db =mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.on('open', function(){
+    //we r connected!s
+    console.log("we are connected bro/sis")
+});
 
 
-                cases=element.infected;
-                if (cases>255){
-                    color="rgb(255,0,0)";
-                }
-                else{
-                    color=`rgb(${cases}, 0, 0)`;
-                }
+var kittySchema = new mongoose.Schema({
+    name: String
+  });
 
-                // Recover ppl
+  // NOTE: methods must be added to the schema before compiling it with mongoose.model()
+  kittySchema.methods.speak = function speak() {
+    var greeting = "My name is " + this.name
+    console.log(greeting);
+  };
+  var Kitten=mongoose.model('Kitten',kittySchema);
+  
+  var Prkitty= new Kitten({ name: 'Prkitty' });
+  console.log(Prkitty.name); 
+  Prkitty.speak();
 
-                // recov=element.recovered;
-                // if(recov>300){
-                //     color="rgb(0,100,0)";
-                // }
-                // else{
-                //     color=`rgb(0,${recov},0)`;
-                // }
-                // Mark on the map
-                new mapboxgl.Marker({
-                    draggable: false,
-                    color: color
-                })
-
-
-                    .setLngLat([longitude, latitude])
-                    .addTo(map);
-            });
-        })
-}
-updateMap();
