@@ -1,17 +1,14 @@
 {
-  "name": "express",
+  "name": "mongoose-tut",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.13"
-  },
+  "main": "index.js",
   "scripts": {
-    "nodemon": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "pr",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.0.9"
+  }
 }
