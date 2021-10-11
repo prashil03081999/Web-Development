@@ -1,29 +1,16 @@
+setInterval(() => {
+    d=new Date();
+    hourTme=d.getHours();
+    minuteTime=d.getMinutes();
+    secondTime=d.getSeconds();
 
-// getting-started.js
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/prkart', {useNewUrlParser: true,
-useUnifiedTopology:true});
+    // Formulaes to rotate hour,min and sec hands!1
 
-var db =mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.on('open', function(){
-    //we r connected!s
-    console.log("we are connected bro/sis")
-});
+    hrotation=30*hourTme+ minuteTime/2;
+    mrotation=6*minuteTime;
+    srotation=6*secondTime;
 
-
-var kittySchema = new mongoose.Schema({
-    name: String
-  });
-
-  // NOTE: methods must be added to the schema before compiling it with mongoose.model()
-  kittySchema.methods.speak = function speak() {
-    var greeting = "My name is " + this.name
-    console.log(greeting);
-  };
-  var Kitten=mongoose.model('Kitten',kittySchema);
-  
-  var Prkitty= new Kitten({ name: 'Prkitty' });
-  console.log(Prkitty.name); 
-  Prkitty.speak();
-
+    hour.style.transform = `rotate(${hrotation}deg)`;
+    minute.style.transform = `rotate(${mrotation}deg)`;
+    second.style.transform = `rotate(${srotation}deg)`;
+}, 1000);
