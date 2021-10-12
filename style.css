@@ -1,136 +1,101 @@
-/* It removes the gap between two pictures or two different sections *{}
-     */
 *{
-    margin: 0px;
-    box-sizing: border-box;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
-#logo{
-    display: flex;
-    color: white;
-    align-items: center;
-    margin: 0 14px;
-    font-size: 28px;
-    margin-right: 80px;
+body{
+    overflow: hidden;   /*to stop horzontal scroll */
+    animation: shake linear 3s infinite;
 }
-#logo img{
-    height: 42px;
-    /* filter: invert(1); */
-    
-}
-#navbar{
-    background-color: red;
-    font-family: 'Yeon Sung' ;
-    padding: 18px, 14px;
-}
-#navbar ul{
-    display: flex;
-    flex-direction: row;
-     /* justify-content: center; */
-    align-items: center;
-}
-#navbar li{
-    list-style: none;
-}
-#navbar li a{ 
-    font-size: 26px;;
-   text-decoration: none;
-    padding: 13px 37px;
-    color: white;
-}
-#navbar li a:hover{
-    color: black;  
-    
+.sky{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url(background.jpg) ;
+    background-repeat: no-repeat;
 }
 
-#introSection{
-    padding-bottom: 200px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'ZCOOL QingKe HuangYou';
-    font-size: 34px;;
-    align-items: center;
-    background: center/cover no-repeat url("/static/bg.jpg") ;
-    height: 425px;
-    background-color: red;
+.tree{
+    height: 100vh;
+    width: 100%;
+    background-image: url(tree3.png);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    position: absolute;
+    top: -36px;
+
 }
-#introSection div.small{
-    font-size: 25px;
-    padding: 5px;
+.track{
+    height: 50vh;
+    width: 800vw;
+    background-image: url(track.png);
+    background-repeat: repeat-x;
+    /* background-size: cover; */
+    position: absolute;
+    top: 87vh;
+    animation: carmove linear 0.8s infinite;
+}
+.car{
+    height: 102px;
+    width: 380px;
+    background-image: url(car_body.png);
+    background-size: cover;
+    background-repeat: no no-repeat;
+    position: absolute;
+    left: 100px;
+    /* top: 259px; */
+    bottom: 6.3vh ;   /* It will take img to the bottom */
+    animation: shake linear 3s infinite;
 }
 
-#missionSection{
-    height: 326px;; 
-    width: 67%;
-    margin: auto;
+.wheel1 img{
+    width: 68px;
+    position: relative;
+    top: 42px;
+    left: 48px;
+    animation: wheelRotation linear .3s infinite;
+
+}
+.wheel2 img{
+    width: 74px;
+    position: relative;
+    top: -31px;
+    left: 236px;
+    animation: wheelRotation linear .3s infinite;
 }
 
-#missionSection h2{
-    font-size: 36px;
-    font-family: 'Yeon Sung' ;
-    text-align: center;
-    padding-top: 12px;
+@keyframes wheelRotation
+{
+    100%{
+        transform: rotate(360deg);
+    }
 }
-
-.card{
-    display: inline-block;
-    border: 2px solid black;
-    border-radius: 10px;
-    width: 30%;
-    background-color: white;
-    margin: 11px 15px;
-    height: 209px;
+@keyframes carmove
+{
+    100%{
+        transform: translateX(-50vw);
+    }
 }
-.card h4{
-    text-align: center;
-    margin: 0 12px;
-    margin-top: 24px;
-    font-family: Arial, Helvetica, sans-serif;
+@keyframes shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
 }
-.card-box{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.card-img{
-    height: 131px;
-    padding: 0 14px;
-    margin: 5px 9px;
-}
-.card-img img{
-    height: inherit; 
-}
-
-#sponsorsSection{
-    height: 326px;
-    background-color: #fbd6d6c7;
-    text-align: center;
-}
-#sponsorsSection h2{
-   text-align: center;
-   padding-top: 12px;
-}
-#sponsors{
-    height: 120px;
-    max-width: 100px;
-    margin: auto
-}
-
-.spImage{
-    height: 165px;
-    margin: 20px;
-    
-}
-
-   
-
-#footer{
-    display: flex;
-    background-color: black;
-    color: white;
-    height: 20px;
-    justify-content: center;
-    align-items: centers;
+@keyframes shakebody
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
 }
