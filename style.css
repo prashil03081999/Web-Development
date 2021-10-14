@@ -1,101 +1,40 @@
-*{
-    margin: 0;
-    padding: 0;
+.container{
+    text-align: center;
+    margin: 23px;
 }
-body{
-    overflow: hidden;   /*to stop horzontal scroll */
-    animation: shake linear 3s infinite;
-}
-.sky{
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    background-image: url(background.jpg) ;
-    background-repeat: no-repeat;
-}
-
-.tree{
-    height: 100vh;
-    width: 100%;
-    background-image: url(tree3.png);
-    background-repeat: no-repeat;
-    /* background-size: cover; */
-    position: absolute;
-    top: -36px;
-
-}
-.track{
-    height: 50vh;
-    width: 800vw;
-    background-image: url(track.png);
-    background-repeat: repeat-x;
-    /* background-size: cover; */
-    position: absolute;
-    top: 87vh;
-    animation: carmove linear 0.8s infinite;
-}
-.car{
-    height: 102px;
-    width: 380px;
-    background-image: url(car_body.png);
-    background-size: cover;
-    background-repeat: no no-repeat;
-    position: absolute;
-    left: 100px;
-    /* top: 259px; */
-    bottom: 6.3vh ;   /* It will take img to the bottom */
-    animation: shake linear 3s infinite;
+h1{
+    font-size: 56px;
+    color: rgb(54, 77, 77);
+    border: 3px solid black;
+    box-sizing: border-box;
+    width: 30%;
+    margin: auto;
+    border-radius: 10px;
+    
 }
 
-.wheel1 img{
-    width: 68px;
-    position: relative;
-    top: 42px;
-    left: 48px;
-    animation: wheelRotation linear .3s infinite;
-
-}
-.wheel2 img{
-    width: 74px;
-    position: relative;
-    top: -31px;
-    left: 236px;
-    animation: wheelRotation linear .3s infinite;
+table{
+    margin: auto;
 }
 
-@keyframes wheelRotation
-{
-    100%{
-        transform: rotate(360deg);
-    }
+input{
+    font-size: 24px;
+    border: 3px solid black;
+    border-radius: 23px;
+    height: 40px;
 }
-@keyframes carmove
-{
-    100%{
-        transform: translateX(-50vw);
-    }
+button{
+    font-size: 25px;
+    background-color:  light-yellow ;
+    width: 73px;
+    height: 53px;
+    border-radius: 31px;
 }
-@keyframes shake
-{
-    0%{
-        transform: translateY(-5px);
-    }
-    50%{
-        transform: translateY(5px);
-    }
-    100%{
-        transform: translateY(-5px);
-    }
-}
-@keyframes shakebody
-{
-    0%{
-        transform: translateY(-5px);
-    }
-    50%{
-        transform: translateY(5px);
-    }
-    100%{
-        transform: translateY(-5px);
-    }
+.calculator{
+    margin: 23px;
+    border: 4px solid black;
+    display: inline-block;
+    border-radius: 53px;
+    padding: 20px;
+    background-color: rgb(67, 90, 90);
 }
